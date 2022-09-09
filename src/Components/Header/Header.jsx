@@ -1,12 +1,11 @@
-import { Button, Flex, Stack, HStack, VStack } from '@chakra-ui/react'
 import React from 'react'
-import { ListItem, Box, UnorderedList, Image } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import "./header.css"
 import WelcomeBox from './IntroSec'
 
 export default function Header() {
     return (
-        <Box background='#0A2640' height={'500px'} >
+        <Box background='#0A2640' height={'1000px'} >
             <WelcomeBox />
         </Box>
     )
