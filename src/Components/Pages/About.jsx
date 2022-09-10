@@ -1,9 +1,11 @@
-import { Heading, VStack, HStack, Text, Box, Image, ButtonGroup, Button } from '@chakra-ui/react';
+import { Heading, VStack, HStack, Text, Box, Image, Button } from '@chakra-ui/react';
 import React from 'react';
 import SinglePers from "../../Images/single-pers.png";
 import Twopers from "../../Images/two-pers-hand-shake.png";
 import Singleman from "../../Images/man-sitting.png";
-import { ArrowForwardIcon } from '@chakra-ui/icons';
+import MaleWithStats from "../../Images/perswithstats.png"
+import { ArrowForwardIcon, CheckCircleIcon } from '@chakra-ui/icons';
+import { List, ListItem, ListIcon, } from '@chakra-ui/react'
 
 const CardComp = (props) => {
     return (
@@ -42,6 +44,36 @@ export default function AboutSection() {
                 <Box w='18.75em' h='35.9em'>
                     <CardComp image={<Image src={Singleman} />} />
                 </Box>
+            </HStack>
+            <HStack width='100%' justify='center' mt='5em'>
+                <Image src={MaleWithStats} alt='' width='80' />
+                <VStack>
+                    <Box ml='5em'>
+                        <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>We connect our customers <br />
+                            with the best, and help them <br />
+                            keep up-and stay open.
+                        </Heading>
+                        <List spacing={5} mt='2em' mb='2.2em'>
+                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em'>
+                                <ListIcon as={CheckCircleIcon} color='black.500' />
+                                We connect our customers with the best
+                            </ListItem>
+                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em'>
+                                <ListIcon as={CheckCircleIcon} color='black.500' />
+                                Advisor success customer launch party.
+                            </ListItem>
+                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em'>
+                                <ListIcon as={CheckCircleIcon} color='black.500' />
+                                Business-to-consumer long tail.
+                            </ListItem>
+                            <ListItem>
+                                <Button _hover={{ background: '#37C8BF' }} fontWeight='700' fontFamily='Open Sans' borderRadius='3em'
+                                    color='#ffffff' variant='solid' bgColor='#0A2640'
+                                >Start now</Button>
+                            </ListItem>
+                        </List>
+                    </Box>
+                </VStack>
             </HStack>
         </Box>
     )
