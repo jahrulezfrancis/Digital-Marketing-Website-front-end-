@@ -1,12 +1,16 @@
 import React from 'react';
 import { ListItem, HStack, UnorderedList, Image, Stack, Box, Button, Heading, Text, } from '@chakra-ui/react'
 import HeaderLogo from "../../Images/Boldo.png"
+import SideImages from './SideImage';
 
 
 export default function WelcomeBox() {
     return (
         <>
             <Box>
+                <Box bgColor='#ffffff' width='20em'>
+
+                </Box>
                 <UnorderedList color='white' listStyleType='none'>
                     <HStack justify='flex-end' align='center' padding='3.5em .625em' m={'0em 5em'} gap={10}>
                         <ListItem marginRight='auto'><Image src={HeaderLogo} /></ListItem>
@@ -33,6 +37,7 @@ export default function WelcomeBox() {
                             Buy Template
                         </Button>
                         <Button w='11.6em' h='3em' borderRadius='3.5em' border={'2px solid #FFFFFF'} p='16px 56px'>Explore</Button>
+                        <SideImages />
                     </Box>
                 </Box>
             </Box>
