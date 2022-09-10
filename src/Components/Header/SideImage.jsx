@@ -21,14 +21,14 @@ export default function SideImages() {
 
 export function BottomImage() {
     return (
-            <HStack display='flex' p='3.2em .7em' justify='center' className='bottom-section' 
-            alignItems='center'  flexWrap='wrap' flex='1' direction='row'>
-                <Image src={FirstOne} alt='first logo' />
-                <Image src={SecondOne} alt='second logo' />
-                <Image src={Thirdone} alt='third logo' />
-                <Image src={FirstOne} alt='first logo' />
-                <Image src={SecondOne} alt='second logo' />
-                <Image src={Thirdone} alt='third logo' />
-            </HStack>
+        <HStack display='flex' p='3.2em .7em' justify='center' className='bottom-section'
+            alignItems='center' flexWrap='wrap' flex='1' direction='row'>
+            <Image src={FirstOne} alt='first logo' />
+            <Image src={SecondOne} alt='second logo' />
+            <Image src={Thirdone} alt='third logo' />
+            <Image src={FirstOne} alt='first logo' />
+            <Image src={SecondOne} alt='second logo' />
+            <Image src={Thirdone} alt='third logo' />
+        </HStack>
     )
 }
