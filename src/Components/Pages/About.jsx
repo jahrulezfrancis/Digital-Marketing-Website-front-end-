@@ -6,6 +6,9 @@ import Singleman from "../../Images/man-sitting.png";
 import MaleWithStats from "../../Images/perswithstats.png"
 import { ArrowForwardIcon, CheckCircleIcon } from '@chakra-ui/icons';
 import { List, ListItem, ListIcon, } from '@chakra-ui/react'
+import {FiFeather, FiEye} from 'react-icons/fi'
+import {BsBrightnessHigh} from 'react-icons/bs'
+import FemaleOnCall from "../../Images/pers-making-call.png"
 
 const CardComp = (props) => {
     return (
@@ -15,7 +18,8 @@ const CardComp = (props) => {
             <Text lineHeight='2em' fontFamily='Open Sans' fontSize='1em' fontWeight='20em'>
                 Learning curve network
                 <br /> effects return on investment.</Text>
-            <Button mt='1.5em' p='oem 1em' w='10.25em' variant='outline' textDecoration={'underline'} rightIcon={<ArrowForwardIcon />}>
+            <Button mt='1.5em' p='oem 1em' w='10.25em' variant='outline' bgColor='null'
+                textDecoration={'underline'} rightIcon={<ArrowForwardIcon />}>
                 Explore Page
             </Button>
         </Box>
@@ -74,6 +78,34 @@ export default function AboutSection() {
                         </List>
                     </Box>
                 </VStack>
+            </HStack>
+
+            <HStack justify='center'>
+                <VStack>
+                    <Box mt='10em' mr='5em'>
+                        <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>
+                            We connect our customers <br />
+                            with the best, and help them <br />
+                            keep up-and stay open.
+                        </Heading>
+                        <List spacing={5} mt='2em' mb='9em'>
+                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' 
+                            lineHeight='1.5em' bgColor='#0A2640;' w='25em' h='3.25em' color='#ffffff' alignSelf='center' p='1em'>
+                                <ListIcon as={FiFeather} color='black.500' />
+                                We connect our customers with the best.
+                            </ListItem>
+                            <ListItem _hover={{ background: '#EDEFEE' }} w='25em' fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em' p='1em'>
+                                <ListIcon as={FiEye} color='black.500' />
+                                Advisor success customer launch party.
+                            </ListItem>
+                            <ListItem _hover={{ background: '#EDEFEE' }} w='25em' fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em' p='1em'>
+                                <ListIcon as={BsBrightnessHigh} color='black.500' />
+                                Business-to-consumer long tail.
+                            </ListItem>
+                        </List>
+                    </Box>
+                </VStack>
+                <Image src={FemaleOnCall} alt='' width='24em' h='40em' />
             </HStack>
         </Box>
     )
