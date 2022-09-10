@@ -9,7 +9,7 @@ export default function WelcomeBox() {
         <>
 
             <UnorderedList color='white' listStyleType='none'>
-                <HStack justify='flex-end' align='center' padding='3.5em .625em' mt='0em' ml='1em' gap={10} w='100%'>
+                <HStack justify='flex-end' align='center' padding='3.5em .625em' mt='0em' ml='1em' gap={10}>
                     <ListItem marginRight='auto'><Image src={HeaderLogo} /></ListItem>
                     <ListItem>Products</ListItem>
                     <ListItem>Service</ListItem>

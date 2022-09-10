@@ -1,4 +1,4 @@
-import { Heading, VStack, HStack, Text, Box, Image, Button } from '@chakra-ui/react';
+import { Heading, VStack, HStack, Text, Box, Image, Button, Stack } from '@chakra-ui/react';
 import React from 'react';
 import SinglePers from "../../Images/single-pers.png";
 import Twopers from "../../Images/two-pers-hand-shake.png";
@@ -6,8 +6,8 @@ import Singleman from "../../Images/man-sitting.png";
 import MaleWithStats from "../../Images/perswithstats.png"
 import { ArrowForwardIcon, CheckCircleIcon } from '@chakra-ui/icons';
 import { List, ListItem, ListIcon, } from '@chakra-ui/react'
-import {FiFeather, FiEye} from 'react-icons/fi'
-import {BsBrightnessHigh} from 'react-icons/bs'
+import { FiFeather, FiEye } from 'react-icons/fi'
+import { BsBrightnessHigh } from 'react-icons/bs'
 import FemaleOnCall from "../../Images/pers-making-call.png"
 
 const CardComp = (props) => {
@@ -22,6 +22,29 @@ const CardComp = (props) => {
                 textDecoration={'underline'} rightIcon={<ArrowForwardIcon />}>
                 Explore Page
             </Button>
+        </Box>
+    )
+}
+
+function Testimonials() {
+    return (
+        <Box w='100%' h='50em' bgColor='#0A2640'>
+            <Heading color='white' fontFamily='Manrope' fontWeight='400' fontSize='2em'>An enterprise template to ramp <br />
+                up your company website
+            </Heading>
+            <HStack gap='1.4em'>
+                <Box w='22em' h='20.125em' bgColor='white'>
+                    naso
+                </Box>
+
+                <Box w='22em' h='20.125em' bgColor='white'>
+
+                </Box>
+
+                <Box w='22em' h='20.125em' bgColor='white'>
+
+                </Box>
+            </HStack>
         </Box>
     )
 }
@@ -89,8 +112,8 @@ export default function AboutSection() {
                             keep up-and stay open.
                         </Heading>
                         <List spacing={5} mt='2em' mb='9em'>
-                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' 
-                            lineHeight='1.5em' bgColor='#0A2640;' w='25em' h='3.25em' color='#ffffff' alignSelf='center' p='1em'>
+                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans'
+                                lineHeight='1.5em' bgColor='#0A2640;' w='25em' h='3.25em' color='#ffffff' alignSelf='center' p='1em'>
                                 <ListIcon as={FiFeather} color='black.500' />
                                 We connect our customers with the best.
                             </ListItem>
@@ -107,6 +130,9 @@ export default function AboutSection() {
                 </VStack>
                 <Image src={FemaleOnCall} alt='' width='24em' h='40em' />
             </HStack>
+            <Stack>
+                <Testimonials />
+            </Stack>
         </Box>
     )
 }
