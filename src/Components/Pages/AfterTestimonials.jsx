@@ -34,3 +34,12 @@ export default function AfterTestimonial() {
         </Box>
     )
 }
+
+
+export function BlogSection() {
+    return (
+        <Box>
+
+        </Box>
+    )
+}
