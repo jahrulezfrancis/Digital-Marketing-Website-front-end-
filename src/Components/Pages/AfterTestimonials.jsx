@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, HStack, Image, List, Stack, VStack, ListItem, ListIcon } from '@chakra-ui/react';
+import { Box, Heading, HStack, Image, List, Stack, VStack, ListItem, ListIcon, Text } from '@chakra-ui/react';
 import WorkEnv from "../../Images/work-env.png"
 import { CheckCircleIcon } from '@chakra-ui/icons';
 
@@ -31,15 +31,6 @@ export default function AfterTestimonial() {
                     </VStack>
                 </HStack>
             </Stack>
-        </Box>
-    )
-}
-
-
-export function BlogSection() {
-    return (
-        <Box>
-
         </Box>
     )
 }
