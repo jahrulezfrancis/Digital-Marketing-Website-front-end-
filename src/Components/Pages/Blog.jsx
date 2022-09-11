@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, VStack, Text, Heading, HStack, Image, Flex, Avatar, Stack } from '@chakra-ui/react';
+import { Box, VStack, Text, Heading, HStack, Image, Flex, Avatar, Stack, Button, Input } from '@chakra-ui/react';
 import FirstOne from "../../Images/Job-seeker.png"
 import SecondOne from "../../Images/pers-near-trash.png"
 import ThirdOne from "../../Images/woman-on-couch.png"
@@ -7,7 +7,7 @@ import ThirdOne from "../../Images/woman-on-couch.png"
 
 const PostTemplate = (props) => {
     return (
-        <Box  h='40em'>
+        <Box h='30em'>
             <Image src={props.image} />
             <VStack align='start'>
                 <HStack align='start' pt='2em' pb='1em'>
@@ -29,9 +29,27 @@ const PostTemplate = (props) => {
 }
 
 
+export const NewsLetter = () => {
+    return (
+        <Box width='100%' height='20em' bgColor='#1C3D5B' mt='5em'>
+            <VStack>
+                <Text mt='1.5em' textAlign='center' color='white' fontSize='3em' lineHeight='1.5em' fontFamily='Manrope'>
+                    An enterprise template to ramp <br />
+                    up your company website
+                </Text>
+                <HStack gap={4}>
+                    <Input placeholder='Your Email Address' h='3.5em' width='20em' borderRadius='3.5em' bgColor='#ffffff' />
+                    <Button width='13em' p='1.3em' h='3.5em' borderRadius='3.5em' bgColor='#65E4A3'>Start Now</Button>
+                </HStack>
+            </VStack>
+        </Box>
+    )
+}
+
+
 export function BlogSection() {
     return (
-        <Box w="100%" h='30em'>
+        <Box w="100%" h='27em'>
             <Stack align='center'>
                 <VStack pt='8em'>
                     <Text fontFamily='Open Sans' fontSize='1.25em'>Our Blog</Text>
@@ -65,7 +83,13 @@ export function BlogSection() {
                         </Text>}
                     />
                 </HStack>
+                <Button fontFamily='Open Sans' borderRadius='3em' border='solid 1px #0A2640' p='1.3em'
+                    width='10em' fontSize='1.2em' fontWeight='700'>
+                    Load More
+                </Button>
             </Stack>
+            <NewsLetter />
         </Box>
     )
 }
+
