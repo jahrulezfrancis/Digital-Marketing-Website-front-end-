@@ -13,6 +13,8 @@ import PaulDropz from "../../Images/buju.jpg"
 import Jahrulez from "../../Images/Jahrulez.png"
 import AfterTestimonial from './AfterTestimonials';
 
+
+
 const CardComp = (props) => {
     return (
         <Box w='18.75em' h='35.9em'>
@@ -166,7 +168,6 @@ export default function AboutSection() {
             </HStack>
             <Stack>
                 <Testimonials />
-                <AfterTestimonial /> 
             </Stack>
         </Box>
     )
