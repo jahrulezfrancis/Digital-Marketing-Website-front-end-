@@ -11,7 +11,6 @@ import { BsBrightnessHigh } from 'react-icons/bs'
 import FemaleOnCall from "../../Images/pers-making-call.png"
 import PaulDropz from "../../Images/buju.jpg"
 import Jahrulez from "../../Images/Jahrulez.png"
-import AfterTestimonial from './AfterTestimonials';
 
 
 

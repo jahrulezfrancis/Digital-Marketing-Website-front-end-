@@ -2,12 +2,13 @@ import React from 'react';
 import { Box, Heading, HStack, Image, List, Stack, VStack, ListItem, ListIcon, Text } from '@chakra-ui/react';
 import WorkEnv from "../../Images/work-env.png"
 import { CheckCircleIcon } from '@chakra-ui/icons';
+import { BlogSection } from './Blog';
 
 export default function AfterTestimonial() {
     return (
-        <Box bg='white' w='100%' h='20em' p={4}>
+        <Box bg='white' w='100%' p={4}>
             <Stack justify='center' align='center'>
-                <Stack w='80%' justify='center' align='center' pt='5em'>
+                <Stack w='80%' pt='5em'>
                     <Image src={WorkEnv} alt='work env' />
                 </Stack>
                 <HStack pt='4.5em'>
@@ -31,6 +32,9 @@ export default function AfterTestimonial() {
                     </VStack>
                 </HStack>
             </Stack>
+            <Box>
+                <BlogSection />
+            </Box>
         </Box>
     )
 }

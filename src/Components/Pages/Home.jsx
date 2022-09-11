@@ -1,17 +1,16 @@
-import { Stack } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 import Header from '../Header/Header';
 import AboutSection from './About';
-import { BlogSection } from './Blog';
 import AfterTestimonial from './AfterTestimonials';
+import { BlogSection } from './Blog';
 
 export default function HomePage() {
     return (
-        <Stack>
+        <Box>
             <Header />
             <AboutSection />
             <AfterTestimonial />
-            <BlogSection />
-        </Stack>
+        </Box>
     )
 }
