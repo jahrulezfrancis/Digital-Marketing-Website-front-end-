@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, VStack, Text, Heading, HStack, Image, Flex, Avatar, Stack, Button, Input } from '@chakra-ui/react';
+import { Box, VStack, Text, Heading, HStack, Image, Flex, Avatar, Stack, Button, Input, List, ListItem } from '@chakra-ui/react';
 import FirstOne from "../../Images/Job-seeker.png"
 import SecondOne from "../../Images/pers-near-trash.png"
 import ThirdOne from "../../Images/woman-on-couch.png"
+import FooterLogo from "../../Images/footer-logo.png"
 
 
 const PostTemplate = (props) => {
@@ -31,17 +32,55 @@ const PostTemplate = (props) => {
 
 export const NewsLetter = () => {
     return (
-        <Box width='100%' height='20em' bgColor='#1C3D5B' mt='5em'>
-            <VStack>
-                <Text mt='1.5em' textAlign='center' color='white' fontSize='3em' lineHeight='1.5em' fontFamily='Manrope'>
-                    An enterprise template to ramp <br />
-                    up your company website
-                </Text>
-                <HStack gap={4}>
-                    <Input placeholder='Your Email Address' h='3.5em' width='20em' borderRadius='3.5em' bgColor='#ffffff' />
-                    <Button width='13em' p='1.3em' h='3.5em' borderRadius='3.5em' bgColor='#65E4A3'>Start Now</Button>
-                </HStack>
-            </VStack>
+        <Box width='100%' height='20em' bgColor='#1C3D5B' mt='5em' >
+            <Stack width='100%'>
+                <VStack>
+                    <Text mt='1.2em' mb='1em' textAlign='center' color='white' fontSize='2.5em' lineHeight='1.5em' fontFamily='Manrope'>
+                        An enterprise template to ramp <br />
+                        up your company website
+                    </Text>
+                    <HStack gap={4}>
+                        <Input placeholder='Your Email Address' h='3.5em' width='20em' borderRadius='3.5em' bgColor='#ffffff' />
+                        <Button width='13em' p='1.3em' h='3.5em' borderRadius='3.5em' bgColor='#65E4A3'>Start Now</Button>
+                    </HStack>
+                </VStack>
+            </Stack>
+        </Box>
+    )
+}
+
+export const Footer = () => {
+    return (
+        <Box mt='10em'>
+            <HStack justify='space-between' align='center' gap='3'>
+                <VStack >
+                    <Image src={FooterLogo} alt='Footer Logo' />
+                    <Text lineHeight='2em' mt='3em'>Social media validation business model <br />
+                        canvas graphical user interface launch  <br />
+                        party creative facebook iPad twitter.
+                    </Text>
+                    <Text mt='3em'>All rights reserved.</Text>
+
+                </VStack>
+                <List lineHeight='5em'>
+                    <ListItem><Heading>Landing</Heading> </ListItem>
+                    <ListItem>Home</ListItem>
+                    <ListItem>Product</ListItem>
+                    <ListItem>Service</ListItem>
+                </List>
+                <List lineHeight='5em'>
+                    <ListItem><Heading>Company</Heading> </ListItem>
+                    <ListItem>Home</ListItem>
+                    <ListItem>Career</ListItem>
+                    <ListItem>Service</ListItem>
+                </List>
+                <List lineHeight='5em'>
+                    <ListItem><Heading>Resources</Heading> </ListItem>
+                    <ListItem>Blog</ListItem>
+                    <ListItem>Product</ListItem>
+                    <ListItem>Service</ListItem>
+                </List>
+            </HStack>
         </Box>
     )
 }
@@ -89,6 +128,7 @@ export function BlogSection() {
                 </Button>
             </Stack>
             <NewsLetter />
+            <Footer />
         </Box>
     )
 }
