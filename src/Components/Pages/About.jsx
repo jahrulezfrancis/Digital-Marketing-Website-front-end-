@@ -1,4 +1,4 @@
-import { Heading, VStack, HStack, Text, Box, Image, Button, Stack } from '@chakra-ui/react';
+import { Heading, VStack, HStack, Text, Box, Image, Button, Stack, Avatar, Flex } from '@chakra-ui/react';
 import React from 'react';
 import SinglePers from "../../Images/single-pers.png";
 import Twopers from "../../Images/two-pers-hand-shake.png";
@@ -9,6 +9,9 @@ import { List, ListItem, ListIcon, } from '@chakra-ui/react'
 import { FiFeather, FiEye } from 'react-icons/fi'
 import { BsBrightnessHigh } from 'react-icons/bs'
 import FemaleOnCall from "../../Images/pers-making-call.png"
+import PaulDropz from "../../Images/buju.jpg"
+import Jahrulez from "../../Images/Jahrulez.png"
+import AfterTestimonial from './AfterTestimonials';
 
 const CardComp = (props) => {
     return (
@@ -29,22 +32,53 @@ const CardComp = (props) => {
 function Testimonials() {
     return (
         <Box w='100%' h='50em' bgColor='#0A2640'>
-            <Heading color='white' fontFamily='Manrope' fontWeight='400' fontSize='2em'>An enterprise template to ramp <br />
-                up your company website
-            </Heading>
-            <HStack gap='1.4em'>
-                <Box w='22em' h='20.125em' bgColor='white'>
-                    naso
-                </Box>
+            <Stack justify='center' ml='7.5em' mr='7.5em' flex='1' flexWrap='wrap'>
+                <Heading color='white' fontFamily='Manrope' fontWeight='400'
+                    fontSize='2em' mb='2em' mt='1.5em'
+                >
+                    An enterprise template to ramp <br />
+                    up your company website
+                </Heading>
+                <HStack gap='1.4em'>
+                    <Box w='22em' h='20rem' bgColor='white' borderRadius='.8em' p='1em'>
+                        <Text lineHeight='2.25em' fontSize='1.5em' fontWeight={400} fontFamily='Open Sans'>“Buyer buzz partner network disruptive non-disclosure agreement business”</Text>
+                        <Flex gap='3'>
+                            <Avatar size='md' name='Jahrulez Francis' src={Jahrulez} />
+                            <Flex direction='column'>
+                                <Text>Longsaar Francis</Text> <br />
+                                <Text>jahrulez@jtowngroove</Text>
+                            </Flex>
+                        </Flex>
+                    </Box>
+                    <Box w='22em' h='24.625em' bgColor='white' borderRadius='.8em' p='1em' alignSelf='start' flexWrap='wrap'>
+                        <Text lineHeight='2.25em' fontSize='1.5em' fontWeight={400} fontFamily='Open Sans'>
+                            “Learning curve infrastructure value proposition advisor strategy user
+                            experience hypotheses investor.”
+                        </Text>
+                        <Flex gap='3' mt='1em'>
+                            <Avatar size='md' name='Paul Dropz' src={PaulDropz} />
+                            <Flex direction='column' flexWrap='wrap'>
+                                <Text>Paul Dropz</Text> <br />
+                                <Text>dropz@jtowngroove</Text>
+                            </Flex>
+                        </Flex>
+                    </Box>
 
-                <Box w='22em' h='20.125em' bgColor='white'>
-
-                </Box>
-
-                <Box w='22em' h='20.125em' bgColor='white'>
-
-                </Box>
-            </HStack>
+                    <Box w='22em' h='22em' bgColor='white' borderRadius='.8em' p='1em'>
+                        <Text lineHeight='2.25em' fontSize='1.5em' fontWeight={400} fontFamily='Open Sans'>
+                            “Release facebook responsive web design business
+                            model canvas seed money monetization.”
+                        </Text>
+                        <Flex gap='3'>
+                            <Avatar size='md' name='Nanret John' src='' />
+                            <Flex direction='column'>
+                                <Text>Nanret John</Text> <br />
+                                <Text>nanret@jtowngroove</Text>
+                            </Flex>
+                        </Flex>
+                    </Box>
+                </HStack>
+            </Stack>
         </Box>
     )
 }
@@ -132,6 +166,7 @@ export default function AboutSection() {
             </HStack>
             <Stack>
                 <Testimonials />
+                <AfterTestimonial /> 
             </Stack>
         </Box>
     )
