@@ -8,9 +8,49 @@ import ThirdOne from "../../Images/woman-making-call.png"
 import FourthOne from "../../Images/Job-seeker.png"
 import FifthOne from "../../Images/three-men-in-workshop.png"
 
+
+export const ImageSection = () => {
+    return (
+        <Box>
+            <HStack justify='center' mt='-5em'>
+                <VStack>
+                    <Image src={FirstOne} alt="" boxSize='16em' />
+                    <Image src={SecondOne} alt="" boxSize='16em' />
+                </VStack>
+                <Image src={ThirdOne} alt="" h='32em' />
+                <VStack>
+                    <Image src={FourthOne} alt="" boxSize='16em' />
+                    <Image src={FifthOne} alt="" boxSize='16em' />
+                </VStack>
+            </HStack>
+        </Box>
+    )
+}
+
+export function OurStory() {
+    return (
+        <Box mt='5em'>
+            <VStack align='center'>
+                <Text align='left' textAlign='left' justifyContent='start' p='.7em'>Our Stoty</Text>
+                <Heading mb='5em' p='.5em'>
+                    Handshake infographic mass market <br />
+                    crowdfunding iteration.
+                </Heading>
+                <Text>
+                    Conversion angel investor entrepreneur first mover advantage. Handshake <br />
+                    infographic mass market crowdfunding iteration. Traction stock user experience <br />
+                    deployment beta innovator incubator focus. Sales user experience branding growth <br />
+                    hacking holy grail monetization conversion prototype stock network effects. Learning <br />
+                    curve network effects return on investment bootstrapping business-to-consumer.
+                </Text>
+            </VStack>
+        </Box>
+    )
+}
+
 export function AboutUs() {
     return (
-        <Box background='#0A2640' height={'49.875em'}>
+        <Box background='#0A2640' height={'38em'}>
             <UnorderedList color='white' listStyleType='none'>
                 <HStack justify='flex-end' align='center' padding='3.5em .625em' mt='0em' ml='1em' gap={10}>
                     <ListItem marginRight='auto'><Image src={HeaderLogo} /></ListItem>
