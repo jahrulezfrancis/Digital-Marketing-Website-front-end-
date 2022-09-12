@@ -13,18 +13,21 @@ export default function AfterTestimonial() {
                 </Stack>
                 <HStack pt='4.5em'>
                     <Box mr='5.5em'>
-                        <Heading fontFamily='Manrope' fontSize='2em' fontWeight='400' dropShadow={'.5rem .5rem 1rem'} >We connect our customers <br />
+                        <Heading fontFamily='Manrope' fontSize='2em' fontWeight='400' dropShadow={'.5rem .5rem 1rem'} >
+                            We connect our customers <br />
                             with the best, and help <br />
                             them keep up-and stay open.
                         </Heading>
                     </Box>
                     <VStack>
                         <List>
-                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em' mb='2.5em'>
+                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans'
+                                lineHeight='1.5em' mb='2.5em'>
                                 We connect our customers with the best?.
                                 <ListIcon as={CheckCircleIcon} color='black.500' ml='2.5em' />
                             </ListItem>
-                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em'>
+                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans'
+                                lineHeight='1.5em'>
                                 Android research & development rockstar?
                                 <ListIcon as={CheckCircleIcon} color='black.500' ml='2em' />
                             </ListItem>

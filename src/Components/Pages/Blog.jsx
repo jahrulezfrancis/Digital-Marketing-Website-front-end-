@@ -53,28 +53,37 @@ export const Footer = () => {
     return (
         <Box mt='10em'>
             <HStack justify='space-between' align='center' gap='3'>
-                <VStack >
-                    <Image src={FooterLogo} alt='Footer Logo' />
-                    <Text lineHeight='2em' mt='3em'>Social media validation business model <br />
-                        canvas graphical user interface launch  <br />
-                        party creative facebook iPad twitter.
-                    </Text>
-                    <Text mt='3em'>All rights reserved.</Text>
-
+                <VStack gap='3em'>
+                    <Stack>
+                        <Box width='10em' mt='4em' mb='2em'>
+                            <Image src={FooterLogo} alt='Footer Logo' objectFit='cover' />
+                        </Box>
+                        <Stack >
+                            <Text lineHeight='2em'
+                                fontFamily='Open Sans' fontWeight={400} color='#777777' fontSize='1em'>
+                                Social media validation business model <br />
+                                canvas graphical user interface launch  <br />
+                                party creative facebook iPad twitter.
+                            </Text>
+                        </Stack>
+                    </Stack>
+                    <Stack align='flex-start' justify='start'>
+                        <Text textAlign='left'>All rights reserved.</Text>
+                    </Stack>
                 </VStack>
-                <List lineHeight='5em'>
+                <List lineHeight='3em'>
                     <ListItem><Heading>Landing</Heading> </ListItem>
                     <ListItem>Home</ListItem>
                     <ListItem>Product</ListItem>
                     <ListItem>Service</ListItem>
                 </List>
-                <List lineHeight='5em'>
+                <List lineHeight='3em'>
                     <ListItem><Heading>Company</Heading> </ListItem>
                     <ListItem>Home</ListItem>
                     <ListItem>Career</ListItem>
                     <ListItem>Service</ListItem>
                 </List>
-                <List lineHeight='5em'>
+                <List lineHeight='3em'>
                     <ListItem><Heading>Resources</Heading> </ListItem>
                     <ListItem>Blog</ListItem>
                     <ListItem>Product</ListItem>
