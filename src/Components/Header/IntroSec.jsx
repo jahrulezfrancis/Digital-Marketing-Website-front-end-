@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListItem, HStack, UnorderedList, Image, Flex, Box, Button, Heading, Text, Container, } from '@chakra-ui/react'
-import HeaderLogo from "../../Images/Boldo.png"
+import HeaderLogo from "../../Images/Logo.png"
 import SideImages, { BottomImage } from './SideImage';
 import { NavLink } from 'react-router-dom';
 
@@ -12,8 +12,12 @@ export default function WelcomeBox() {
             <UnorderedList color='white' listStyleType='none'>
                 <HStack justify='flex-end' align='center' padding='3.5em .625em' mt='0em' ml='1em' gap={10}>
                     <ListItem marginRight='auto'><Image src={HeaderLogo} /></ListItem>
-                    <ListItem>Products</ListItem>
-                    <ListItem>Service</ListItem>
+                    <NavLink to='/products'>
+                        <ListItem>Products</ListItem>
+                    </NavLink>
+                    <NavLink to='service'>
+                        <ListItem>Service</ListItem>
+                    </NavLink>
                     <NavLink to='about-us'>
                         <ListItem>About</ListItem>
                     </NavLink>
