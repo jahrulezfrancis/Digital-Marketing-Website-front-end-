@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, UnorderedList, HStack, ListItem, Image, Button, VStack, Heading, Text } from '@chakra-ui/react'
+import { Box, UnorderedList, HStack, ListItem, Image, Button, VStack, Heading, Text, Stack } from '@chakra-ui/react'
 import HeaderLogo from "../../Images/Logo.png"
 import { NavLink } from 'react-router-dom'
 import FirstOne from "../../Images/man-calling.png"
@@ -29,21 +29,28 @@ export const ImageSection = () => {
 
 export function OurStory() {
     return (
-        <Box mt='5em'>
-            <VStack align='center'>
-                <Text align='left' textAlign='left' justifyContent='start' p='.7em'>Our Stoty</Text>
-                <Heading mb='5em' p='.5em'>
-                    Handshake infographic mass market <br />
-                    crowdfunding iteration.
-                </Heading>
-                <Text>
-                    Conversion angel investor entrepreneur first mover advantage. Handshake <br />
-                    infographic mass market crowdfunding iteration. Traction stock user experience <br />
-                    deployment beta innovator incubator focus. Sales user experience branding growth <br />
-                    hacking holy grail monetization conversion prototype stock network effects. Learning <br />
-                    curve network effects return on investment bootstrapping business-to-consumer.
-                </Text>
-            </VStack>
+        <Box mt='5em' width='52em'>
+            <HStack justify='center' align='center'> 
+                <VStack align='center' justify='center'>
+                    <Text color='#777777' textAlign='left' fontSize='1.25em' fontWeight='400' fontFamily='Open Sans'
+                        lineHeight='2em'>
+                        Our Stoty
+                    </Text>
+                    <Heading mb='5em' fontSize='2.5em'
+                        fontWeight='400' fontFamily='Manrope' lineHeight='2em'>
+                        Handshake infographic mass market <br />
+                        crowdfunding iteration.
+                    </Heading>
+                    <Text color='#777777' fontSize='1.1em' fontWeight='400'
+                        fontFamily='Open Sans' lineHeight='1.4em'>
+                        Conversion angel investor entrepreneur first mover advantage. Handshake <br />
+                        infographic mass market crowdfunding iteration. Traction stock user experience <br />
+                        deployment beta innovator incubator focus. Sales user experience branding growth <br />
+                        hacking holy grail monetization conversion prototype stock network effects. Learning <br />
+                        curve network effects return on investment bootstrapping business-to-consumer.
+                    </Text>
+                </VStack>
+            </HStack>
         </Box>
     )
 }
