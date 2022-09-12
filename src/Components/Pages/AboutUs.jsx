@@ -27,10 +27,28 @@ export const ImageSection = () => {
     )
 }
 
+
+export function Team() {
+    return (
+        <Box pt='5em'>
+            <VStack>
+                <Text>Our team</Text>
+                <Heading>The leadership team</Heading>
+                <Text>
+                    Conversion angel investor entrepreneur first mover advantage. Handshake <br />
+                    infographic mass market crowdfunding iteration. Traction stock user experience <br />
+                    deployment beta innovator incubator focus.
+                </Text>
+            </VStack>
+        </Box>
+    )
+}
+
+
 export function OurStory() {
     return (
-        <Box mt='5em' width='52em'>
-            <HStack justify='center' align='center'> 
+        <Box mt='5em' width='100%'>
+            <HStack justify='center' align='center'>
                 <VStack align='center' justify='center'>
                     <Text color='#777777' textAlign='left' fontSize='1.25em' fontWeight='400' fontFamily='Open Sans'
                         lineHeight='2em'>
@@ -42,7 +60,7 @@ export function OurStory() {
                         crowdfunding iteration.
                     </Heading>
                     <Text color='#777777' fontSize='1.1em' fontWeight='400'
-                        fontFamily='Open Sans' lineHeight='1.4em'>
+                        fontFamily='Manrope' lineHeight='2em'>
                         Conversion angel investor entrepreneur first mover advantage. Handshake <br />
                         infographic mass market crowdfunding iteration. Traction stock user experience <br />
                         deployment beta innovator incubator focus. Sales user experience branding growth <br />
@@ -51,6 +69,37 @@ export function OurStory() {
                     </Text>
                 </VStack>
             </HStack>
+
+            <Box bgColor='#0A2640' height='32em' mt='5em'>
+                <VStack>
+                    <Text color='white' fontSize='1.1em' fontWeight='400'
+                        fontFamily='Open Sans' lineHeight='2em' mt='5em'>
+                        Our Numbers
+                    </Text>
+                    <Heading color='white' fontSize='3em' fontWeight='400'
+                        fontFamily='Open Sans' lineHeight='2em' textAlign='center'>
+                        Handshake infographic mass market <br />
+                        crowdfunding iteration.
+                    </Heading>
+                    <HStack gap={'14'}>
+                        <VStack p='1em'>
+                            <Heading fontWeight='400' color='#4FE9A4' fontSize='5em' fontFamily='Manrope'>
+                                120m
+                            </Heading>
+                            <Text fontWeight='400' color='white' fontSize='1.25em' fontFamily='Open Sans'>Cool feature title</Text>
+                        </VStack>
+                        <VStack>
+                            <Heading fontWeight='400' color='#4FE9A4' fontSize='5em' fontFamily='Manrope'>10.000</Heading>
+                            <Text fontWeight='400' color='white' fontSize='1.25em' fontFamily='Open Sans'>Cool feature title</Text>
+                        </VStack>
+                        <VStack>
+                            <Heading fontWeight='400' color='#4FE9A4' fontSize='5em' fontFamily='Manrope'>240</Heading>
+                            <Text fontWeight='400' color='white' fontSize='1.25em' fontFamily='Open Sans'>Cool feature title</Text>
+                        </VStack>
+                    </HStack>
+                </VStack>
+            </Box>
+
         </Box>
     )
 }
