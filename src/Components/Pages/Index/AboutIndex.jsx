@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
-import { AboutUs, ImageSection, OurStory } from '../AboutUs';
+import { AboutUs, ImageSection, OurStory, Team } from '../AboutUs';
 
 export default function AboutIndex() {
     return (
@@ -8,6 +8,7 @@ export default function AboutIndex() {
             <AboutUs />
             <ImageSection />
             <OurStory />
+            <Team />
         </Box>
     )
 }
