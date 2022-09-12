@@ -2,6 +2,7 @@ import React from 'react';
 import { ListItem, HStack, UnorderedList, Image, Flex, Box, Button, Heading, Text, Container, } from '@chakra-ui/react'
 import HeaderLogo from "../../Images/Boldo.png"
 import SideImages, { BottomImage } from './SideImage';
+import { NavLink } from 'react-router-dom';
 
 
 export default function WelcomeBox() {
@@ -13,7 +14,9 @@ export default function WelcomeBox() {
                     <ListItem marginRight='auto'><Image src={HeaderLogo} /></ListItem>
                     <ListItem>Products</ListItem>
                     <ListItem>Service</ListItem>
-                    <ListItem>About</ListItem>
+                    <NavLink to='about-us'>
+                        <ListItem>About</ListItem>
+                    </NavLink>
                     <Button color='#0A2640' marginEnd='2em'>Login</Button>
                 </HStack>
             </UnorderedList>
