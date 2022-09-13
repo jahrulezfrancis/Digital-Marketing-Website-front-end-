@@ -32,7 +32,7 @@ const PostTemplate = (props) => {
 
 export const NewsLetter = () => {
     return (
-        <Box width='100%' height='20em' bgColor='#1C3D5B' mt='5em' >
+        <Box width='100%' height='20em' bgColor='#0A2640' mt='5em' borderRadius='.9em' >
             <Stack width='100%'>
                 <VStack>
                     <Text mt='1.2em' mb='1em' textAlign='center' color='white' fontSize='2.5em' lineHeight='1.5em' fontFamily='Manrope'>
@@ -53,9 +53,9 @@ export const Footer = () => {
     return (
         <Box mt='10em'>
             <HStack justify='space-between' align='center' gap='3'>
-                <VStack gap='3em'>
+                <VStack>
                     <Stack>
-                        <Box width='10em' mt='4em' mb='2em'>
+                        <Box width='10em' mt='-2.5em'>
                             <Image src={FooterLogo} alt='Footer Logo' objectFit='cover' />
                         </Box>
                         <Stack >
@@ -67,9 +67,7 @@ export const Footer = () => {
                             </Text>
                         </Stack>
                     </Stack>
-                    <Stack align='flex-start' justify='start'>
-                        <Text textAlign='left'>All rights reserved.</Text>
-                    </Stack>
+
                 </VStack>
                 <List lineHeight='3em'>
                     <ListItem><Heading>Landing</Heading> </ListItem>
@@ -90,6 +88,9 @@ export const Footer = () => {
                     <ListItem>Service</ListItem>
                 </List>
             </HStack>
+            <Stack align='center' justify='center' m='2em'>
+                <Text textAlign='center' color='black.300' fontWeight='bold'>All rights reserved | Designed By 7thWeb</Text>
+            </Stack>
         </Box>
     )
 }
