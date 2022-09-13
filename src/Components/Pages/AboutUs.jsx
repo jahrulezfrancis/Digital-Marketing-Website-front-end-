@@ -11,6 +11,7 @@ import FifthOne from "../../Images/three-men-in-workshop.png"
 import Team1 from "../../Images/team-1st.png"
 import Team2 from "../../Images/team-second.png"
 import Team3 from "../../Images/team-third.png"
+import { Footer, NewsLetter } from './Blog'
 
 
 export const ImageSection = () => {
@@ -92,7 +93,7 @@ export function OurValues() {
     return (
         <Box w='100%' h='72em' bgColor='#0A2640'>
             <VStack>
-                <VStack textAlign='start' align='start' mt='5em' mb='4em' spacing='2em'>
+                <VStack textAlign='start' align='start' mt='8em' mb='4em' spacing='2em'>
                     <Text fontFamily='Open Sans' fontWeight='100' fontSize='1.5em' color='white'>Our Values</Text>
                     <Heading fontFamily='Manrope' fontWeight='400' fontSize='1.5em' color='white'>Things we believe in</Heading>
                     <Text fontFamily='Manrope' fontWeight='400' fontSize='1em' color='white' lineHeight='2em'>
@@ -140,6 +141,12 @@ export function OurValues() {
                     </HStack>
                 </VStack>
             </VStack>
+            <VStack m='3em 3em -3em 3em' align='center' justify='center' pt='5em' >
+                <NewsLetter />
+            </VStack>
+            <Stack m='0em 3em'>
+                <Footer />
+            </Stack>
         </Box>
     )
 }
