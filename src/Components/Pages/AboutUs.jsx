@@ -33,15 +33,55 @@ export const ImageSection = () => {
 
 export function Team() {
     return (
-        <Box pt='5em'>
+        <Box pt='7em'>
             <VStack>
-                <Text>Our team</Text>
-                <Heading>The leadership team</Heading>
-                <Text>
-                    Conversion angel investor entrepreneur first mover advantage. Handshake <br />
-                    infographic mass market crowdfunding iteration. Traction stock user experience <br />
-                    deployment beta innovator incubator focus.
-                </Text>
+                <VStack textAlign='start' align='flex-start' z>
+                    <Text color='#777777' fontSize='1.25em' fontWeight='400'
+                        fontFamily='Manrope' lineHeight='1.8em'>Our team</Text>
+                    <Heading color='#000000' fontSize='3em' fontWeight='400'
+                        fontFamily='Manrope' lineHeight='1.8em'>The leadership team</Heading>
+                    <Text color='#777777' fontSize='1.25em' fontWeight='400'
+                        fontFamily='Open Sans' lineHeight='1.8em'>
+                        Conversion angel investor entrepreneur first mover advantage. Handshake <br />
+                        infographic mass market crowdfunding iteration. Traction stock user experience <br />
+                        deployment beta innovator incubator focus.
+                    </Text>
+                </VStack>
+                <HStack spacing='2.5em' pt='4em'>
+                    <VStack>
+                        <Image src={Team1} alt='' height='22em' />
+                        <Text color='#000000' fontSize='1.75em' fontWeight='400'
+                            fontFamily='Manrope' lineHeight='2em'>
+                            Micheal Scot
+                        </Text>
+                        <Text color='#777777' fontSize='1.75em' fontWeight='400'
+                            fontFamily='Manrope' lineHeight='2em'>
+                            General Manager
+                        </Text>
+                    </VStack>
+                    <VStack>
+                        <Image src={Team2} alt='' height='22em' />
+                        <Text color='#000000' fontSize='1.75em' fontWeight='400'
+                            fontFamily='Manrope' lineHeight='2em'>
+                            Dwight Schrute
+                        </Text>
+                        <Text color='#777777' fontSize='1.75em' fontWeight='400'
+                            fontFamily='Manrope' lineHeight='2em'>
+                            General Manager
+                        </Text>
+                    </VStack>
+                    <VStack>
+                        <Image src={Team3} alt='' height='22em' />
+                        <Text color='#000000' fontSize='1.75em' fontWeight='400'
+                            fontFamily='Manrope' lineHeight='2em'>
+                            Pam Beetsley
+                        </Text>
+                        <Text color='#777777' fontSize='1.75em' fontWeight='400'
+                            fontFamily='Manrope' lineHeight='2em'>
+                            General Manager
+                        </Text>
+                    </VStack>
+                </HStack>
             </VStack>
         </Box>
     )
@@ -75,7 +115,7 @@ export function OurStory() {
 
             <Box bgColor='#0A2640' height='32em' mt='5em'>
                 <VStack>
-                    <Text color='white' fontSize='1.1em' fontWeight='400'
+                    <Text color='#ffffff' fontSize='1.1em' fontWeight='400'
                         fontFamily='Open Sans' lineHeight='2em' mt='5em'>
                         Our Numbers
                     </Text>
@@ -138,17 +178,6 @@ export function AboutUs() {
                     Funding handshake buyer business-to-business metrics iPad partnership. First mover advantage <br />
                     innovator success deployment non-disclosure.
                 </Text>
-                <HStack>
-                    <VStack>
-                        <Image src={Team1} alt='' />
-                    </VStack>
-                    <VStack>
-                        <Image src={Team2} alt='' />
-                    </VStack>
-                    <VStack>
-                        <Image src={Team3} alt='' />
-                    </VStack>
-                </HStack>
             </VStack>
         </Box>
     )
