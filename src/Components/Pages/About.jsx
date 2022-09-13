@@ -14,7 +14,7 @@ import Jahrulez from "../../Images/Jahrulez.png"
 
 
 
-const CardComp = (props) => {
+export const CardComp = (props) => {
     return (
         <Box w='18.75em' h='35.9em'>
             {props.image}

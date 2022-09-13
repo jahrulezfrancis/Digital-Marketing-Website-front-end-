@@ -6,7 +6,7 @@ import ThirdOne from "../../Images/woman-on-couch.png"
 import FooterLogo from "../../Images/footer-logo.png"
 
 
-const PostTemplate = (props) => {
+export const PostTemplate = (props) => {
     return (
         <Box h='30em'>
             <Image src={props.image} />
