@@ -6,6 +6,7 @@ import FirstOne from "../../Images/man-calling.png"
 import SecondOne from "../../Images/pers-near-trash.png"
 import ThirdOne from "../../Images/woman-making-call.png"
 import FourthOne from "../../Images/Job-seeker.png"
+import JobSeeker from "../../Images/two-pers-hand-shake.png"
 import FifthOne from "../../Images/three-men-in-workshop.png"
 import Team1 from "../../Images/team-1st.png"
 import Team2 from "../../Images/team-second.png"
@@ -91,18 +92,31 @@ export function OurValues() {
     return (
         <Box w='100%' h='72em' bgColor='#0A2640'>
             <VStack>
-                <VStack textAlign='start' align='start' mt='5em' mb='4em'>
-                    <Text color='white'>Our Values</Text>
-                    <Heading  color='white'>Things we believe in</Heading>
-                    <Text color='white'>
+                <VStack textAlign='start' align='start' mt='5em' mb='4em' spacing='2em'>
+                    <Text fontFamily='Open Sans' fontWeight='100' fontSize='1.5em' color='white'>Our Values</Text>
+                    <Heading fontFamily='Manrope' fontWeight='400' fontSize='1.5em' color='white'>Things we believe in</Heading>
+                    <Text fontFamily='Manrope' fontWeight='400' fontSize='1em' color='white' lineHeight='2em'>
                         Conversion angel investor entrepreneur first mover advantage. Handshake <br />
-                        infographic mass market crowdfunding iteration. Traction stock user experience <br />z
+                        infographic mass market crowdfunding iteration. Traction stock user experience <br />
                         deployment beta innovator incubator focus.
                     </Text>
                 </VStack>
-                <VStack>
-                    <HStack align='start' textAlign='start' spacing='2em' >
-                        <Image src={SecondOne} alt='' width='6em' height='6em' />
+                <VStack align='start' spacing='5em'>
+                    <HStack align='start' textAlign='start' spacing='2em' width='100%' >
+                        <Image src={SecondOne} alt='' width='9.2em' height='9em' />
+                        <VStack align='start'>
+                            <Heading fontFamily='Manrope' fontWeight='400' fontSize='1.5em' color='white'>
+                                We are commited
+                            </Heading>
+                            <Text color='white' fontFamily='Open Sans' fontSize='1em'>
+                                Conversion angel investor entrepreneur first mover advantage. <br />
+                                Handshake infographic mass market crowdfunding iteration.
+                            </Text>
+                        </VStack>
+                    </HStack>
+
+                    <HStack align='start' textAlign='start' spacing='2em' width='100%' >
+                        <Image src={FourthOne} alt='' width='9.2em' height='9em' />
                         <VStack align='start'>
                             <Heading fontFamily='Manrope' fontWeight='400' fontSize='1.5em' color='white'>We are commited</Heading>
                             <Text color='white' fontFamily='Open Sans' fontSize='1em'>
@@ -110,7 +124,19 @@ export function OurValues() {
                                 Handshake infographic mass market crowdfunding iteration.
                             </Text>
                         </VStack>
+                    </HStack>
 
+                    <HStack align='start' textAlign='start' spacing='2em' width='100%'  >
+                        <Image src={JobSeeker} alt='' width='9.2em' height='9em' />
+                        <VStack align='start'>
+                            <Heading fontFamily='Manrope' fontWeight='400' fontSize='1.5em' color='white'>
+                                We are commited
+                            </Heading>
+                            <Text color='white' fontFamily='Open Sans' fontSize='1em'>
+                                Conversion angel investor entrepreneur first mover advantage. <br />
+                                Handshake infographic mass market crowdfunding iteration.
+                            </Text>
+                        </VStack>
                     </HStack>
                 </VStack>
             </VStack>
