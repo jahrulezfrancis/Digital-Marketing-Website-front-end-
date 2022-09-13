@@ -87,6 +87,36 @@ export function Team() {
     )
 }
 
+export function OurValues() {
+    return (
+        <Box w='100%' h='72em' bgColor='#0A2640'>
+            <VStack>
+                <VStack textAlign='start' align='start' mt='5em' mb='4em'>
+                    <Text color='white'>Our Values</Text>
+                    <Heading  color='white'>Things we believe in</Heading>
+                    <Text color='white'>
+                        Conversion angel investor entrepreneur first mover advantage. Handshake <br />
+                        infographic mass market crowdfunding iteration. Traction stock user experience <br />z
+                        deployment beta innovator incubator focus.
+                    </Text>
+                </VStack>
+                <VStack>
+                    <HStack align='start' textAlign='start' spacing='2em' >
+                        <Image src={SecondOne} alt='' width='6em' height='6em' />
+                        <VStack align='start'>
+                            <Heading fontFamily='Manrope' fontWeight='400' fontSize='1.5em' color='white'>We are commited</Heading>
+                            <Text color='white' fontFamily='Open Sans' fontSize='1em'>
+                                Conversion angel investor entrepreneur first mover advantage. <br />
+                                Handshake infographic mass market crowdfunding iteration.
+                            </Text>
+                        </VStack>
+
+                    </HStack>
+                </VStack>
+            </VStack>
+        </Box>
+    )
+}
 
 export function OurStory() {
     return (
