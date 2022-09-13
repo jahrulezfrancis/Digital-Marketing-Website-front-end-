@@ -7,6 +7,9 @@ import SecondOne from "../../Images/pers-near-trash.png"
 import ThirdOne from "../../Images/woman-making-call.png"
 import FourthOne from "../../Images/Job-seeker.png"
 import FifthOne from "../../Images/three-men-in-workshop.png"
+import Team1 from "../../Images/team-1st.png"
+import Team2 from "../../Images/team-second.png"
+import Team3 from "../../Images/team-third.png"
 
 
 export const ImageSection = () => {
@@ -135,6 +138,17 @@ export function AboutUs() {
                     Funding handshake buyer business-to-business metrics iPad partnership. First mover advantage <br />
                     innovator success deployment non-disclosure.
                 </Text>
+                <HStack>
+                    <VStack>
+                        <Image src={Team1} alt='' />
+                    </VStack>
+                    <VStack>
+                        <Image src={Team2} alt='' />
+                    </VStack>
+                    <VStack>
+                        <Image src={Team3} alt='' />
+                    </VStack>
+                </HStack>
             </VStack>
         </Box>
     )
