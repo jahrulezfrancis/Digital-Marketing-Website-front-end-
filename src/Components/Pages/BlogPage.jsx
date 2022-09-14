@@ -8,7 +8,7 @@ import HeaderLogo from "../../Images/Logo.png"
 import FirstOne from "../../Images/Job-seeker.png"
 import SecondOne from "../../Images/pers-near-trash.png"
 import ThirdOne from "../../Images/woman-on-couch.png"
-import { NewsLetter } from './Blog';
+import { Footer, NewsLetter } from './Blog';
 
 
 function CardTemplate(props) {
@@ -128,6 +128,9 @@ export default function BlogSection() {
                     </Button>
                     <Stack w='100%' m='3em' p='3em'>
                         <NewsLetter />
+                    </Stack>
+                    <Stack justify='start' w='100%' p='0em 2em'>
+                        <Footer />
                     </Stack>
                 </Stack>
             </Box>
