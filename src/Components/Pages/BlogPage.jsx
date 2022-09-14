@@ -8,6 +8,7 @@ import HeaderLogo from "../../Images/Logo.png"
 import FirstOne from "../../Images/Job-seeker.png"
 import SecondOne from "../../Images/pers-near-trash.png"
 import ThirdOne from "../../Images/woman-on-couch.png"
+import { NewsLetter } from './Blog';
 
 
 function CardTemplate(props) {
@@ -68,7 +69,7 @@ export default function BlogSection() {
                             management venture
                         </Heading>
                     </VStack>
-                    <HStack gap='8'>
+                    <HStack gap='8' display='flex' flexWrap='wrap' justify='center' align='center'>
                         <CardTemplate
                             image={FirstOne}
                             text={<Text fontSize='1.25em' fontFamily="Open Sans" fontWeight='400' lineHeight='2em'>
@@ -84,6 +85,34 @@ export default function BlogSection() {
                                 user interface rockstar.
                             </Text>}
                         />
+
+                        <CardTemplate
+                            image={SecondOne}
+                            text={<Text fontSize='1.25em' fontFamily="Open Sans" fontWeight='400' lineHeight='2em'>
+                                Seed round direct mailing non- <br />
+                                disclosure agreement graphical <br />
+                                user interface rockstar.
+                            </Text>}
+                        />
+
+                        <CardTemplate
+                            image={SecondOne}
+                            text={<Text fontSize='1.25em' fontFamily="Open Sans" fontWeight='400' lineHeight='2em'>
+                                Seed round direct mailing non- <br />
+                                disclosure agreement graphical <br />
+                                user interface rockstar.
+                            </Text>}
+                        />
+
+                        <CardTemplate
+                            image={SecondOne}
+                            text={<Text fontSize='1.25em' fontFamily="Open Sans" fontWeight='400' lineHeight='2em'>
+                                Seed round direct mailing non- <br />
+                                disclosure agreement graphical <br />
+                                user interface rockstar.
+                            </Text>}
+                        />
+
                         <CardTemplate
                             image={ThirdOne}
                             text={<Text fontSize='1.25em' fontFamily="Open Sans" fontWeight='400' lineHeight='2em'>
@@ -97,6 +126,9 @@ export default function BlogSection() {
                         width='10em' fontSize='1.2em' fontWeight='700'>
                         Load More
                     </Button>
+                    <Stack w='100%' m='3em' p='3em'>
+                        <NewsLetter />
+                    </Stack>
                 </Stack>
             </Box>
         </Box>
