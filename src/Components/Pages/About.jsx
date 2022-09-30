@@ -1,4 +1,4 @@
-import { Heading, VStack, HStack, Text, Box, Image, Button, Stack, Avatar, Flex } from '@chakra-ui/react';
+import { Heading, VStack, HStack, Text, Box, Image, Button, Stack, useMediaQuery, Avatar, Flex } from '@chakra-ui/react';
 import React from 'react';
 import SinglePers from "../../Images/single-pers.png";
 import Twopers from "../../Images/two-pers-hand-shake.png";
@@ -31,16 +31,17 @@ export const CardComp = (props) => {
 }
 
 function Testimonials() {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
     return (
-        <Box w='100%' h='50em' bgColor='#0A2640'>
-            <Stack justify='center' ml='7.5em' mr='7.5em' flex='1' flexWrap='wrap'>
-                <Heading color='white' fontFamily='Manrope' fontWeight='400'
+        <Box w='100%' h={onMobile ? '90em' : '50em' } bgColor='#0A2640'>
+            <Stack align='center' justify='center' ml={onMobile ? '0em' : '7.5em'} mr={onMobile ? '0em' : '7.5em'} flex='1' flexWrap='wrap'>
+                <Heading textAlign={onMobile ? 'center' : 'left'} color='white' fontFamily='Manrope' fontWeight='400'
                     fontSize='2em' mb='2em' mt='1.5em'
                 >
                     An enterprise template to ramp <br />
                     up your company website
                 </Heading>
-                <HStack gap='1.4em'>
+                <Flex gap='1.4em' direction={onMobile ? 'column' : 'row'}>
                     <Box w='22em' h='20rem' bgColor='white' borderRadius='.8em' p='1em'>
                         <Text lineHeight='2.25em' fontSize='1.5em' fontWeight={400} fontFamily='Open Sans'>“Buyer buzz partner network disruptive non-disclosure agreement business”</Text>
                         <Flex gap='3'>
@@ -78,13 +79,14 @@ function Testimonials() {
                             </Flex>
                         </Flex>
                     </Box>
-                </HStack>
+                </Flex>
             </Stack>
         </Box>
     )
 }
 
 export default function AboutSection() {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
     return (
         <Box>
             <VStack>
@@ -109,7 +111,7 @@ export default function AboutSection() {
             </HStack>
             <HStack width='100%' justify='center' mt='5em'>
                 <Image src={MaleWithStats} alt='' width='80' />
-                <VStack>
+                <Flex>
                     <Box ml='5em'>
                         <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>We connect our customers <br />
                             with the best, and help them <br />
@@ -135,12 +137,12 @@ export default function AboutSection() {
                             </ListItem>
                         </List>
                     </Box>
-                </VStack>
+                </Flex>
             </HStack>
 
             <HStack justify='center'>
                 <VStack>
-                    <Box mt='10em' mr='5em'>
+                    <Flex direction={onMobile ? 'column' : 'row'} mt='10em' mr='5em'>
                         <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>
                             We connect our customers <br />
                             with the best, and help them <br />
@@ -161,7 +163,7 @@ export default function AboutSection() {
                                 Business-to-consumer long tail.
                             </ListItem>
                         </List>
-                    </Box>
+                    </Flex>
                 </VStack>
                 <Image src={FemaleOnCall} alt='' width='24em' h='40em' />
             </HStack>
