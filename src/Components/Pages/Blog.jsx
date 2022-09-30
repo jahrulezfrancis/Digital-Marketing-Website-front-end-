@@ -34,7 +34,7 @@ export const NewsLetter = () => {
     const [onMobile] = useMediaQuery('(max-width: 1000px)')
 
     return (
-        <Box width='100%' height={onMobile ? '30em' : '20em'} bgColor='#0A2640' mt='5em' borderRadius='.9em' >
+        <Box width='100%' height={onMobile ? '40em' : '20em'} bgColor='#0A2640' mt='5em' borderRadius='.9em' >
             <Stack width='100%'>
                 <VStack>
                     <Text mt='1.2em' mb='1em' textAlign='center' color='white' fontSize='2.5em' lineHeight='1.5em' fontFamily='Manrope'>
@@ -54,16 +54,18 @@ export const NewsLetter = () => {
 
 
 export const Footer = () => {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
+
     return (
-        <Box mt='10em'>
-            <HStack justify='space-between' align='center' gap='3'>
+        <Box mt={onMobile ? '5em' : '10em'}>
+            <Flex justify={onMobile ? 'center' : 'space-between'} direction={onMobile ? 'column' : 'row'} align='center' gap='3'>
                 <VStack>
-                    <Stack>
-                        <Box width='10em' mt='-2.5em'>
+                    <Stack >
+                        <Box as={Flex} width='20em' mt='-2.5em' justify={onMobile ? 'center' : 'start'}>
                             <Image src={FooterLogo} alt='Footer Logo' objectFit='cover' />
                         </Box>
                         <Stack >
-                            <Text lineHeight='2em'
+                            <Text lineHeight='2em' textAlign={onMobile ? 'center' : 'left'}
                                 fontFamily='Open Sans' fontWeight={400} color='#777777' fontSize='1em'>
                                 Social media validation business model <br />
                                 canvas graphical user interface launch  <br />
@@ -73,25 +75,25 @@ export const Footer = () => {
                     </Stack>
 
                 </VStack>
-                <List lineHeight='3em'>
+                <List lineHeight='3em' textAlign={onMobile ? 'center' : 'left'}>
                     <ListItem><Heading>Landing</Heading> </ListItem>
                     <ListItem>Home</ListItem>
                     <ListItem>Product</ListItem>
                     <ListItem>Service</ListItem>
                 </List>
-                <List lineHeight='3em'>
-                    <ListItem><Heading>Company</Heading> </ListItem>
+                <List lineHeight='3em' textAlign={onMobile ? 'center' : 'left'}>
+                    <ListItem><Heading textAlign='center'>Company</Heading> </ListItem>
                     <ListItem>Home</ListItem>
                     <ListItem>Career</ListItem>
                     <ListItem>Service</ListItem>
                 </List>
-                <List lineHeight='3em'>
+                <List lineHeight='3em' textAlign={onMobile ? 'center' : 'left'}>
                     <ListItem><Heading>Resources</Heading> </ListItem>
                     <ListItem>Blog</ListItem>
                     <ListItem>Product</ListItem>
                     <ListItem>Service</ListItem>
                 </List>
-            </HStack>
+            </Flex>
             <Stack align='center' justify='center' m='2em'>
                 <Text textAlign='center' color='black.300' fontWeight='bold'>All rights reserved | Designed By 7thWeb</Text>
             </Stack>
