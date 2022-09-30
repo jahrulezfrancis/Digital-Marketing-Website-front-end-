@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, VStack, Text, Heading, HStack, Image, Flex, Avatar, Stack, Button, Input, List, ListItem } from '@chakra-ui/react';
+import { Box, VStack, Text, Heading, HStack, Image, Flex, Avatar, Stack, Button, Input, useMediaQuery, List, ListItem } from '@chakra-ui/react';
 import FirstOne from "../../Images/Job-seeker.png"
 import SecondOne from "../../Images/pers-near-trash.png"
 import ThirdOne from "../../Images/woman-on-couch.png"
@@ -31,18 +31,20 @@ export const PostTemplate = (props) => {
 
 
 export const NewsLetter = () => {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
+
     return (
-        <Box width='100%' height='20em' bgColor='#0A2640' mt='5em' borderRadius='.9em' >
+        <Box width='100%' height={onMobile ? '25em' : '20em'} bgColor='#0A2640' mt='5em' borderRadius='.9em' >
             <Stack width='100%'>
                 <VStack>
                     <Text mt='1.2em' mb='1em' textAlign='center' color='white' fontSize='2.5em' lineHeight='1.5em' fontFamily='Manrope'>
                         An enterprise template to ramp <br />
                         up your company website
                     </Text>
-                    <HStack gap={4}>
+                    <Flex justifyContent={onMobile ? 'center' : 'start'} alignItems={onMobile ? 'center' : 'start'} gap={4} direction={onMobile ? 'column' : 'row'}>
                         <Input placeholder='Your Email Address' h='3.5em' width='20em' borderRadius='3.5em' bgColor='#ffffff' />
                         <Button width='13em' p='1.3em' h='3.5em' borderRadius='3.5em' bgColor='#65E4A3'>Start Now</Button>
-                    </HStack>
+                    </Flex>
                 </VStack>
             </Stack>
         </Box>
