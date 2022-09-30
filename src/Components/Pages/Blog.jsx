@@ -103,6 +103,7 @@ export const Footer = () => {
 
 
 export function BlogSection() {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
     return (
         <Box w="100%" h='27em'>
             <Stack align='center'>
@@ -113,7 +114,7 @@ export function BlogSection() {
                         management venture
                     </Heading>
                 </VStack>
-                <HStack gap='8'>
+                <Flex gap='8' direction={onMobile ? 'column' : 'row'} wrap='wrap'>
                     <PostTemplate
                         image={FirstOne}
                         text={<Text fontSize='1.25em' fontFamily="Open Sans" fontWeight='400' lineHeight='2em'>
@@ -137,7 +138,7 @@ export function BlogSection() {
                             proposition
                         </Text>}
                     />
-                </HStack>
+                </Flex>
                 <Button fontFamily='Open Sans' borderRadius='3em' border='solid 1px #0A2640' p='1.3em'
                     width='10em' fontSize='1.2em' fontWeight='700'>
                     Load More
