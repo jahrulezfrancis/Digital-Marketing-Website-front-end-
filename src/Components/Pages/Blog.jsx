@@ -34,7 +34,7 @@ export const NewsLetter = () => {
     const [onMobile] = useMediaQuery('(max-width: 1000px)')
 
     return (
-        <Box width='100%' height={onMobile ? '25em' : '20em'} bgColor='#0A2640' mt='5em' borderRadius='.9em' >
+        <Box width='100%' height={onMobile ? '30em' : '20em'} bgColor='#0A2640' mt='5em' borderRadius='.9em' >
             <Stack width='100%'>
                 <VStack>
                     <Text mt='1.2em' mb='1em' textAlign='center' color='white' fontSize='2.5em' lineHeight='1.5em' fontFamily='Manrope'>
@@ -50,6 +50,8 @@ export const NewsLetter = () => {
         </Box>
     )
 }
+
+
 
 export const Footer = () => {
     return (
