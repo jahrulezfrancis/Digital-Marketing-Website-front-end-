@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListItem, HStack, UnorderedList, Image, Flex, Box, Button, Heading, Text, Container, useMediaQuery, Center, } from '@chakra-ui/react'
+import { ListItem, HStack, UnorderedList, Image, Box, Button, Heading, Text, Container, useMediaQuery, Center, } from '@chakra-ui/react'
 import HeaderLogo from "../../Images/Logo.png"
 import SideImages, { BottomImage } from './SideImage';
 import { NavLink } from 'react-router-dom';
