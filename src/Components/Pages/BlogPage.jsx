@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    ListItem, HStack, Box, UnorderedList, Image, Button,
+    ListItem, HStack, Box, UnorderedList, Image, Button, useMediaQuery,
     Flex, Stack, VStack, Heading, Text, Avatar
 } from "@chakra-ui/react";
 import { NavLink } from 'react-router-dom';
@@ -57,11 +57,13 @@ function Navigation() {
 }
 
 export default function BlogSection() {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
+
     return (
         <Box>
             <Navigation />
             <Box w="100%" h='27em'>
-                <Stack align='center'>
+                <Stack align='center' >
                     <VStack pt='8em'>
                         <Text fontFamily='Open Sans' fontSize='1.25em'>Our Blog</Text>
                         <Heading textAlign='center' fontFamily='Manrope' fontWeight='400' lineHeight='1.5em'>
@@ -69,7 +71,7 @@ export default function BlogSection() {
                             management venture
                         </Heading>
                     </VStack>
-                    <HStack gap='8' display='flex' flexWrap='wrap' justify='center' align='center'>
+                    <Flex direction={onMobile ? 'column' : 'row'} gap='8' Wrap='wrap' justify='center' align='center'>
                         <CardTemplate
                             image={FirstOne}
                             text={<Text fontSize='1.25em' fontFamily="Open Sans" fontWeight='400' lineHeight='2em'>
@@ -121,7 +123,7 @@ export default function BlogSection() {
                                 proposition
                             </Text>}
                         />
-                    </HStack>
+                    </Flex>
                     <Button fontFamily='Open Sans' borderRadius='3em' border='solid 1px #0A2640' p='1.3em'
                         width='10em' fontSize='1.2em' fontWeight='700'>
                         Load More
