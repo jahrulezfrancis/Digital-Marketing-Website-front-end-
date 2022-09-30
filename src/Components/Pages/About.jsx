@@ -33,7 +33,7 @@ export const CardComp = (props) => {
 function Testimonials() {
     const [onMobile] = useMediaQuery('(max-width: 1000px)')
     return (
-        <Box w='100%' h={onMobile ? '90em' : '50em' } bgColor='#0A2640'>
+        <Box w='100%' h={onMobile ? '90em' : '50em'} bgColor='#0A2640'>
             <Stack align='center' justify='center' ml={onMobile ? '0em' : '7.5em'} mr={onMobile ? '0em' : '7.5em'} flex='1' flexWrap='wrap'>
                 <Heading textAlign={onMobile ? 'center' : 'left'} color='white' fontFamily='Manrope' fontWeight='400'
                     fontSize='2em' mb='2em' mt='1.5em'
@@ -96,19 +96,11 @@ export default function AboutSection() {
                 >Handshake infographic mass market <br /> crowdfunding iteration.
                 </Heading>
             </VStack>
-            <HStack spacing='24px' justify='center' gap={10}>
-                <Box w='18.75em' h='35.9em'>
-
-                    <CardComp image={<Image src={SinglePers} />} />
-
-                </Box>
-                <Box w='18.75em' h='35.9em'>
-                    <CardComp image={<Image src={Twopers} />} />
-                </Box>
-                <Box w='18.75em' h='35.9em'>
-                    <CardComp image={<Image src={Singleman} />} />
-                </Box>
-            </HStack>
+            <Flex direction={onMobile ? 'column' : 'row'} align={onMobile ? 'center' : 'start'} justify={onMobile ? 'center' : 'start'} spacing='24px' gap={10} w='100vw'>
+                <CardComp image={<Image src={SinglePers} />} />
+                <CardComp image={<Image src={Twopers} />} />
+                <CardComp image={<Image src={Singleman} />} />
+            </Flex>
             <HStack width='100%' justify='center' mt='5em'>
                 <Image src={MaleWithStats} alt='' width='80' />
                 <Flex>
