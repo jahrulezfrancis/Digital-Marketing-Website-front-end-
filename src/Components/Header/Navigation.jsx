@@ -1,7 +1,9 @@
 import React from "react"
 import { ListItem, HStack, UnorderedList, Image, Button, } from "@chakra-ui/react";
+import { Box, Spacer, Stack, Menu, IconButton, MenuButton, MenuList, MenuItem, useMediaQuery, } from '@chakra-ui/react'
 import { NavLink } from "react-router-dom";
 import HeaderLogo from "../../Images/Boldo.png"
+import { MdMenu } from "react-icons/md"
 
 
 export default function Navigation() {
@@ -22,5 +24,35 @@ export default function Navigation() {
                 <Button color='#0A2640' marginEnd='2em'>Login</Button>
             </HStack>
         </UnorderedList>
+    )
+}
+
+export function MobileMenu() {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
+    return (
+        <Box display={onMobile ? 'block' : 'none'} p='1em' w='100vw'>
+            <HStack>
+                <Stack>
+                    <Image src={HeaderLogo} alt='header logo' />
+                </Stack>
+                <Spacer />
+                <Menu>
+                    <MenuButton color='white' bgColor='#000000' _hover={{ bgColor: '#87D322' }} fontSize='2em' as={IconButton} icon={<MdMenu />} />
+                    <MenuList>
+                        <MenuItem>
+                            Product
+                        </MenuItem>
+                        <MenuItem>
+                        Service
+                        </MenuItem>
+                        <MenuItem>
+                            About
+                        </MenuItem>
+                        <Button bgColor='white' color='black' borderRadius='2em' w='8em'>Register</Button>
+                        <Button bgColor='black' color='white' _hover='none' borderRadius='2em'>Login</Button>
+                    </MenuList>
+                </Menu>
+            </HStack>
+        </Box>
     )
 }
