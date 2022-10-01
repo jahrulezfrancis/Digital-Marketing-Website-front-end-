@@ -101,9 +101,9 @@ export default function AboutSection() {
                 <CardComp image={<Image src={Twopers} />} />
                 <CardComp image={<Image src={Singleman} />} />
             </Flex>
-            <HStack width='100%' justify='center' mt='5em'>
+            <Flex justify={onMobile ? 'center' : 'center'} align={onMobile ? 'center' : 'center'} direction={onMobile ? 'column' : 'row'} width='100%'  mt='5em'>
                 <Image src={MaleWithStats} alt='' width='80' />
-                <Flex>
+                <Flex justify='center'>
                     <Box ml='5em'>
                         <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>We connect our customers <br />
                             with the best, and help them <br />
@@ -130,7 +130,7 @@ export default function AboutSection() {
                         </List>
                     </Box>
                 </Flex>
-            </HStack>
+            </Flex>
 
             <HStack justify='center'>
                 <VStack>
