@@ -101,15 +101,15 @@ export default function AboutSection() {
                 <CardComp image={<Image src={Twopers} />} />
                 <CardComp image={<Image src={Singleman} />} />
             </Flex>
-            <Flex justify={onMobile ? 'center' : 'center'} align={onMobile ? 'center' : 'center'} direction={onMobile ? 'column' : 'row'} width='100%'  mt='5em'>
+            <Flex justify={onMobile ? 'center' : 'center'} align={onMobile ? 'center' : 'center'} direction={onMobile ? 'column' : 'row'} width='100%' mt='5em'>
                 <Image src={MaleWithStats} alt='' width='80' />
                 <Flex justify='center'>
-                    <Box ml='5em'>
-                        <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>We connect our customers <br />
+                    <Box ml={onMobile ? '0em' : '5em'}>
+                        <Heading textAlign={onMobile ? 'center' : 'left'} fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>We connect our customers <br />
                             with the best, and help them <br />
                             keep up-and stay open.
                         </Heading>
-                        <List spacing={5} mt='2em' mb='2.2em'>
+                        <List spacing={5} mt='2em' mb='2.2em' justifyContent={onMobile ? 'center' : 'flex-start'}>
                             <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em'>
                                 <ListIcon as={CheckCircleIcon} color='black.500' />
                                 We connect our customers with the best
@@ -133,31 +133,35 @@ export default function AboutSection() {
             </Flex>
 
             <HStack justify='center'>
-                <VStack>
-                    <Flex direction={onMobile ? 'column' : 'row'} mt='10em' mr='5em'>
-                        <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>
-                            We connect our customers <br />
-                            with the best, and help them <br />
-                            keep up-and stay open.
-                        </Heading>
-                        <List spacing={5} mt='2em' mb='9em'>
-                            <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans'
-                                lineHeight='1.5em' bgColor='#0A2640;' w='25em' h='3.25em' color='#ffffff' alignSelf='center' p='1em'>
-                                <ListIcon as={FiFeather} color='black.500' />
-                                We connect our customers with the best.
-                            </ListItem>
-                            <ListItem _hover={{ background: '#EDEFEE' }} w='25em' fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em' p='1em'>
-                                <ListIcon as={FiEye} color='black.500' />
-                                Advisor success customer launch party.
-                            </ListItem>
-                            <ListItem _hover={{ background: '#EDEFEE' }} w='25em' fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em' p='1em'>
-                                <ListIcon as={BsBrightnessHigh} color='black.500' />
-                                Business-to-consumer long tail.
-                            </ListItem>
-                        </List>
-                    </Flex>
+                    <Flex direction={onMobile ? 'column' : 'row'} justify={onMobile ? 'center' : 'center'} align={onMobile ? 'center' : 'center'} mt='10em' mr={onMobile ? '0em' : '5em'} wrap='wrap'>
+                <VStack mr={onMobile ? '0em' : '3em'}>
+                        <Stack justify={onMobile ? 'center' : 'start'} align={onMobile ? 'center' : 'start'}>
+                            <Heading fontWeight='400' fontSize='2.23em' fontFamily='Manrope' lineHeight='1.5em'>
+                                We connect our customers <br />
+                                with the best, and help them <br />
+                                keep up-and stay open.
+                            </Heading>
+                        </Stack>
+                        <Stack>
+                            <List spacing={5} mt='2em' mb='9em'>
+                                <ListItem fontWeight='400' fontSize='1.2em' fontFamily='Open Sans'
+                                    lineHeight='1.5em' bgColor='#0A2640;' w='25em' h='3.25em' color='#ffffff' alignSelf='center' p='1em'>
+                                    <ListIcon as={FiFeather} color='black.500' />
+                                    We connect our customers with the best.
+                                </ListItem>
+                                <ListItem _hover={{ background: '#EDEFEE' }} w='25em' fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em' p='1em'>
+                                    <ListIcon as={FiEye} color='black.500' />
+                                    Advisor success customer launch party.
+                                </ListItem>
+                                <ListItem _hover={{ background: '#EDEFEE' }} w='25em' fontWeight='400' fontSize='1.2em' fontFamily='Open Sans' lineHeight='1.5em' p='1em'>
+                                    <ListIcon as={BsBrightnessHigh} color='black.500' />
+                                    Business-to-consumer long tail.
+                                </ListItem>
+                            </List>
+                        </Stack>
                 </VStack>
                 <Image src={FemaleOnCall} alt='' width='24em' h='40em' />
+                    </Flex>
             </HStack>
             <Stack>
                 <Testimonials />
