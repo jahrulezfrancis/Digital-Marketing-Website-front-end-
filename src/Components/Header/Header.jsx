@@ -7,7 +7,7 @@ export default function Header() {
     const [onMobile] = useMediaQuery('(max-width: 1000px)')
 
     return (
-        <Box background='#0A2640' height={onMobile ? '85em' : '49.875em'} >
+        <Box background='#0A2640' height={onMobile ? '95em' : '49.875em'} minH='90'>
             <WelcomeBox />
         </Box>
     )
