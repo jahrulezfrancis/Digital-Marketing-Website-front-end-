@@ -37,16 +37,22 @@ export function MobileMenu() {
                 </Stack>
                 <Spacer />
                 <Menu>
-                    <MenuButton color='white' bgColor='#000000' _hover={{ bgColor: '#87D322' }} fontSize='2em' as={IconButton} icon={<MdMenu />} />
-                    <MenuList>
-                        <MenuItem>
-                            Product
+                    <MenuButton color='white' bgColor='transparent' _hover={'none'} fontSize='2em' as={IconButton} icon={<MdMenu />} />
+                    <MenuList w='100vw' h='100vh' gap='1em'>
+                        <MenuItem m='1em'>
+                            <NavLink to='/'>
+                                Product
+                            </NavLink>
                         </MenuItem>
-                        <MenuItem>
-                        Service
+                        <MenuItem m='1em'>
+                            <NavLink to='/'>
+                                Service
+                            </NavLink>
                         </MenuItem>
-                        <MenuItem>
-                            About
+                        <MenuItem m='1em'>
+                            <NavLink to='/'>
+                                About
+                            </NavLink>
                         </MenuItem>
                         <Button bgColor='white' color='black' borderRadius='2em' w='8em'>Register</Button>
                         <Button bgColor='black' color='white' _hover='none' borderRadius='2em'>Login</Button>
