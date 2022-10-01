@@ -3,13 +3,12 @@ import { ListItem, HStack, UnorderedList, Image, Box, Button, Heading, Text, Con
 import HeaderLogo from "../../Images/Logo.png"
 import SideImages, { BottomImage } from './SideImage';
 import { NavLink } from 'react-router-dom';
+import { MobileMenu } from './Navigation';
 
-
-export default function WelcomeBox() {
+export function Navigation() {
     const [onMobile] = useMediaQuery('(max-width: 1000px)')
     return (
-        <>
-
+        <Box p='0em' m='0em' display={onMobile ? 'none' : 'block'}>
             <UnorderedList color='white' listStyleType='none'>
                 <HStack justify='flex-end' align='center' padding='3.5em .625em' mt='0em' ml='1em' gap={10}>
                     <ListItem marginRight='auto'><Image src={HeaderLogo} /></ListItem>
@@ -25,6 +24,17 @@ export default function WelcomeBox() {
                     <Button color='#0A2640' marginEnd='2em'>Login</Button>
                 </HStack>
             </UnorderedList>
+        </Box>
+    )
+}
+
+
+export default function WelcomeBox() {
+    const [onMobile] = useMediaQuery('(max-width: 1000px)')
+    return (
+        <>
+            <Navigation />
+            <MobileMenu />
             <Box m={'1em 3em'} p='.7em .625em' display='flex' flexDirection={onMobile ? 'column' : 'row'} justifyContent={onMobile ? 'center' : 'start'}>
                 <Box width={onMobile ? '100%' : '50%'}>
                     <Box justifyContent={onMobile ? 'center' : 'start'} alignItems='center' mt='5em' display='flex' flexDirection={onMobile ? 'column' : 'column'}>
@@ -47,7 +57,7 @@ export default function WelcomeBox() {
                         <Button w='11.6em' h='3em' borderRadius='3.5em' border={'2px solid #FFFFFF'} p='16px 56px'>Explore</Button>
                     </Box>
                 </Box>
-                <Box width={ onMobile ? '100%' : '50%'} mt={onMobile ? '1em' : 'oem'}>
+                <Box width={onMobile ? '100%' : '50%'} mt={onMobile ? '1em' : 'oem'}>
                     <SideImages />
                 </Box>
             </Box>
